@@ -9,33 +9,38 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Leo Juster
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
+    //This is the price of the ticket;
     private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private Ticket issuedTicket;
 
+    private Ticket aylesburyTicket;
+    
+    private Ticket amershamTicket;
+    
+    private Ticket highwycombeTicket;
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
+        this. price = price;
         balance = 0;
         total = 0;
-    }
 
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
-    {
-        return price;
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        amershamTicket = new Ticket ("Amersham", 300);
+        highwycombeTicket = new Ticket("High Wycombe", 330);
+        
+        issuedTicket = null;
     }
 
     /**
@@ -60,8 +65,30 @@ public class TicketMachine
         else 
         {
             System.out.println("Use a positive amount rather than: " +
-                               amount);
+                amount);
         }
+    }
+    
+    /**
+     * This is where you are able to select a journey to Aylesbury.
+     */
+    public void selectAylesburyTicket()
+    {
+        issuedTicket = aylesburyTicket;
+    }
+    /**
+     * This is where you are able to select a journey to Amersham.
+     */
+    public void selectAmershamTicket()
+    {
+        issuedTicket = amershamTicket;
+    }
+    /**
+     * This is where you are able to select a journey to High Wycombe.
+     */
+    public void selectHighwycombeTicket()
+    {
+        issuedTicket = highwycombeTicket;
     }
 
     /**
@@ -77,7 +104,7 @@ public class TicketMachine
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
+            System.out.println("# " + price + " pence.");
             System.out.println("##################");
             System.out.println();
 
@@ -89,8 +116,8 @@ public class TicketMachine
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+                (price - balance) + " more cents.");
+
         }
     }
 
