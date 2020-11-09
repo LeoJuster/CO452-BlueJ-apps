@@ -18,12 +18,12 @@ public class Module
      */
     public Module(String title, String codeNo)
     {
-        mark = 0;
+        this. mark = mark;
         this.title = title;
         this.codeNo = codeNo;
     }
 
-    public void awardMark(int mark)
+    public void awardGrade(int mark)
     {
         if((mark >= 0) && (mark <= 100))
         {

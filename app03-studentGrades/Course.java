@@ -17,9 +17,7 @@ public class Course
     private Module module4;
 
     private int finalMark;
-
     private Grades finalGrade;
-
     /**
      * Constructor for objects of class Course
      */
@@ -30,14 +28,16 @@ public class Course
         this.title = title;
 
         module1 = new Module("Programming Concepts", "CO452");
-        //todo add the others
+        module2 = new Module("Web Development", "CO456");
+        module3 = new Module("Computer Architectures", "CO450");
+        module4 = new Module("Digital Technologies", "CO454");
     }
 
     public void addMark(int mark, int moduleNo)
     {
         if(moduleNo == 1)
         {
-            module1.awardMark(mark);
+            module1.awardGrade(mark);
         }
     }
 
@@ -54,8 +54,24 @@ public class Course
     {
         if((mark >= 0) && (mark < 39))
         {
-            return Grades.F;
+            System.out.println("F");
         }
-        return Grades.F;
+        if ((mark >= 40) && (mark < 49))
+            {
+                System.out.println("D");
+            }
+        if ((mark >= 50) && (mark < 59))
+        {
+            System.out.println("C");
+        }
+        if ((mark >= 60) && (mark < 69))
+        {
+            System.out.println("B");
+        }
+        if ((mark>=70) && (mark <=100))
+        {
+            System.out.println("A");
+        }
+        return Grades. X;
     }
 }
