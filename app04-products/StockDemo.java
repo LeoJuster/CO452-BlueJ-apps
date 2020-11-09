@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -5,93 +6,76 @@
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * Modified by Leo Juster
  */
 public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    
+    private Random randomGenerator;
+    /**
+     * Create a StockManager and populate it with at least
+     * 10 sample products.
+     */
+    public StockDemo(StockManager manager)
+    {
+        this.manager = manager;
+        randomGenerator = new Random();
 
-    /**
-     * Create a StockManager and populate it with a few
-     * sample products.
-     */
-    public StockDemo()
-    {
-        manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
-    }
-    
-    /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
-     */
-    public void demo()
-    {
-        // Show details of all of the products.
-        manager.printProductDetails();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printProductDetails();
-    }
-    
-    /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void showDetails(int id)
-    {
-        Product product = getProduct(id);
-        
-        if(product != null) 
-        {
-            System.out.println(product.toString());
-        }
-    }
-    
-    /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int id)
-    {
-        Product product = getProduct(id);
-        
-        if(product != null) 
-        {
-            showDetails(id);
-            product.sellOne();
-            showDetails(id);
-        }
-    }
-    
-    /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
-     */
-    public Product getProduct(int id)
-    {
-        Product product = manager.findProduct(id);
-        
-        if(product == null) 
-        {
-            System.out.println("Product with ID: " + id +
-                               " is not recognised.");
-        }
-        return product;
+       
+        manager.addProduct(new Product(101, "Nike AirMax 720"));
+        manager.addProduct(new Product(102, "Nike Airforce 1"));
+        manager.addProduct(new Product(103, "Nike AirMax 90"));
+        manager.addProduct(new Product(104, "Nike AirMax 270"));
+        manager.addProduct(new Product(105, "Nike AirMax 95"));
+        manager.addProduct(new Product(106, "Adidas ZX Boost "));
+        manager.addProduct(new Product(107, "Adidas Continental"));
+        manager.addProduct(new Product(108, "Adidas Superstar"));
+        manager.addProduct(new Product(109, "Adidas Stan Smith"));
+        manager.addProduct(new Product(110, "Adidas ZX Flux"));
     }
 
     /**
-     * @return The stock manager.
+     * This method will run the test neccessary to meet
+     * All the requiremnts
      */
-    public StockManager getManager()
+    public void runDemo()
     {
-        return manager;
+        manager.printAllProducts();
+        demoDeliverProducts();
+        manager.printAllProducts();
+        demoSellProducts();
+        manager.printAllProducts();
     }
+    
+    /**
+     * Where details of products are, the prodcuts is restocked
+     * and shown again
+     */
+    private void demoDeliverProducts()
+    {
+        int quantity = 0;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            quantity = randomGenerator.nextInt(8);
+            manager.deliverProduct(id, quantity);
+        }
+    }
+    /**
+     * Where details of products are, the prodcuts is restocked
+     * and shown again
+     */
+    private void demoSellProducts()
+    {
+        int quantity = 0;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            quantity = randomGenerator.nextInt(4);
+            manager.sellProducts(id, quantity);
+        }
+
+}
 }
