@@ -1,8 +1,7 @@
-
 /**
- * Write a description of class Program here.
+ * This is the class that is charge or the programming
  *
- * @author (your name)
+ * @author Leo Juster
  * @version (a version number or a date)
  */
 public class Program
@@ -10,8 +9,8 @@ public class Program
     private static StockApp app;
 
     /**
-     * This class creates and runs an instance of
-     * the StockApp class
+     * This class runs the StockApp class
+     * 
      */
     public static void main()
     {
