@@ -1,0 +1,199 @@
+
+Added 203: apple iphone 12 stock level: 0 to the stock
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> add
+Add a new Product
+
+Please enter the name of the product.
+> Motorola G9 Plus
+
+Added 204: motorola g9 plus stock level: 0 to the stock
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> add
+Add a new Product
+
+Please enter the name of the product.
+> New Product
+
+Added 205: new product stock level: 0 to the stock
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> add
+Add a new Product
+
+Please enter the name of the product.
+> New Product
+
+Added 206: new product stock level: 0 to the stock
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> add
+Add a new Product
+
+Please enter the name of the product.
+> 
+
+Added 207:  stock level: 0 to the stock
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> remove
+Remove an old Product
+
+Please enter the id of the product
+> 202
+Product 202: apple iphone 11 stock level: 0has been removed
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> remove
+Remove an old Product
+
+Please enter the id of the product
+> 209
+Product not found
+Product ID 209 Not found
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> print all
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> printall
+
+Leo's Stock List
+=================
+
+110: Nike Air Max 720 stock level: 0
+111: Nike Air Max 270 stock level: 0
+112: Nike Air Force 1 stock level: 0
+113: Nike Vapormax stock level: 0
+114: Nike Air Max 90 stock level: 0
+115: Nike Air Max 95 stock level: 0
+116: Adidas ZX Boost stock level: 0
+117: Adidas Continental stock level: 0
+118: Adidas Superstar stock level: 0
+119: Adidas ZX Flux stock level: 0
+200: samsung galaxy s10 stock level: 0
+201: samsung galaxy s20 stock level: 0
+203: apple iphone 12 stock level: 0
+204: motorola g9 plus stock level: 0
+205: new product stock level: 0
+206: new product stock level: 0
+207:  stock level: 0
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> deliver
+Deliver a quantity of Product
+
+Please enter the id of the product
+> 201
+Please enter the amount of the product
+> 8

@@ -1,0 +1,28 @@
+low stock
+The product stock is low 
+
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+[110: Nike Air Max 720 stock level: 0, 111: Nike Air Max 270 stock level: 0, 112: Nike Air Force 1 stock level: 0, 113: Nike Vapormax stock level: 0, 114: Nike Air Max 90 stock level: 0, 115: Nike Air Max 95 stock level: 0, 116: Adidas ZX Boost stock level: 0, 117: Adidas Continental stock level: 0, 118: Adidas Superstar stock level: 0, 119: Adidas ZX Flux stock level: 0]
+******************************
+ Stock Management Application 
+    by Leo Juster
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Sell:       Sell a quantity of product
+    PrintAll:   Print all products
+    Low Stock:  The stock is low
+    Search:     Search for product
+    Deliver:    Deliver a quantity of product
+    Quit:       Quit the program
+
+> 
