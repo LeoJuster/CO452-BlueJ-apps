@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class Parser 
 {
     private CommandWords commands;  // holds all valid command words
-    private Scanner reader;         // source of command input
+    private InputReader reader; // reads user input
 
     /**
      * Create a parser to read from the terminal window.
@@ -27,7 +27,7 @@ public class Parser
     public Parser() 
     {
         commands = new CommandWords();
-        reader = new Scanner(System.in);
+        reader = new InputReader();
     }
 
     /**
@@ -35,24 +35,20 @@ public class Parser
      */
     public Command getCommand() 
     {
-        String inputLine;   // will hold the full input line
+        String inputLine=reader.getString();   // will hold the full input line
         String word1 = null;
         String word2 = null;
 
-        System.out.print("> ");     // print prompt
-
-        inputLine = reader.nextLine();
-
         // Find up to two words on the line.
-        Scanner tokenizer = new Scanner(inputLine);
+        Scanner words = new Scanner(inputLine);
         
-        if(tokenizer.hasNext()) 
+        if(words.hasNext())
         {
-            word1 = tokenizer.next();      // get first word
+            word1 = words.next();      // get first word
         
-            if(tokenizer.hasNext()) 
+            if(words.hasNext())
             {
-                word2 = tokenizer.next();      // get second word
+                word2 = words.next();      // get second word
                 // note: we just ignore the rest of the input line.
             }
         }

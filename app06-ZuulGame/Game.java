@@ -19,70 +19,44 @@
 
 public class Game 
 {
+    private Map map;
     private Parser parser;
     private Room currentRoom;
-        
+    private Player player;
+
     /**
      * Create the game and initialise its internal map.
      */
     public Game() 
     {
-        createRooms();
+        map = new Map();
+        currentRoom = map.getStartRoom();
+        player = new Player ("Leo Juster");
         parser = new Parser();
+        play();
     }
 
-    /**
-     * Create all the rooms and link their exits together.
-     */
-    private void createRooms()
-    {
-        Room outside, theater, pub, lab, office;
-      
-        // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
-        
-        // initialise room exits
-        outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
-
-        theater.setExit("west", outside);
-
-        pub.setExit("east", outside);
-
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
-
-        office.setExit("west", lab);
-
-        currentRoom = outside;  // start game outside
-    }
-
-    /**
-     *  Main play routine.  Loops until end of play.
-     */
-    public void play() 
-    {            
+    public void play() {
         printWelcome();
 
-        // Enter the main command loop.  Here we repeatedly read commands and
+        // Enter the main command loop. Here we repeatedly read commands and
         // execute them until the game is over.
-                
+
         boolean finished = false;
-        
-        while (! finished) 
-        {
-            Command command = parser.getCommand();
-            finished = processCommand(command);
+
+        while (!finished) {
+
+            if (this.player.findItem("treasure") != null) {
+                return;
+            } 
+            else {
+                Command command = parser.getCommand();
+                finished = processCommand(command);
+            }
         }
-        
+
         System.out.println("Thank you for playing.  Good bye.");
     }
-
     /**
      * Print out the opening message for the player.
      */
@@ -96,22 +70,18 @@ public class Game
         System.out.println(currentRoom.getLongDescription());
     }
 
-    /**
+     /**
      * Given a command, process (that is: execute) the command.
+     *
      * @param command The command to be processed.
      * @return true If the command ends the game, false otherwise.
      */
-    private boolean processCommand(Command command) 
-    {
+    private boolean processCommand(Command command) {
         boolean wantToQuit = false;
 
         CommandWord commandWord = command.getCommandWord();
 
-        switch (commandWord) 
-        {
-            case UNKNOWN:
-                System.out.println("I don't know what you mean...");
-                break;
+        switch (commandWord) {
 
             case HELP:
                 printHelp();
@@ -121,14 +91,40 @@ public class Game
                 goRoom(command);
                 break;
 
+            case PICK:
+                pickItem(command);
+                break;
+
             case QUIT:
                 wantToQuit = quit(command);
+                break;
+
+            default:
+
+            case UNKNOWN:
+                System.out.println("I don't know what you mean...");
                 break;
         }
         return wantToQuit;
     }
 
-    // implementations of user commands:
+    private void pickItem(Command command) {
+        if (!command.hasSecondWord()) {
+            // If the second wor is not there, we don't know where to go...
+            System.out.println("What would you like to pick up?");
+            return;
+        }
+
+        String itemName = command.getSecondWord();
+        Item currentRoomItem = currentRoom.getItem();
+
+        if (currentRoomItem.getItemName().equals(itemName)) {
+            player.addItem(currentRoomItem);
+            player.increaseScore(1);
+        } else {
+            System.out.println("there is no item in this room.");
+        }
+    }
 
     /**
      * Print out some help information.
@@ -144,46 +140,64 @@ public class Game
         parser.showCommands();
     }
 
-    /** 
-     * Try to go in one direction. If there is an exit, enter the new
-     * room, otherwise print an error message.
+     /**
+     * Try to go in one direction. If there is an exit, enter the new room,
+     * otherwise print an error message.
      */
-    private void goRoom(Command command) 
-    {
-        if(!command.hasSecondWord()) 
-        {
+    /**
+     * Try to go in one direction. If there is an exit, enter the new room,
+     * otherwise print an error message.
+     */
+    private void goRoom(Command command) {
+        if (!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
             System.out.println("Go where?");
             return;
         }
-
         String direction = command.getSecondWord();
-
         // Try to leave current room.
         Room nextRoom = currentRoom.getExit(direction);
 
         if (nextRoom == null) {
             System.out.println("There is no door!");
-        }
-        else {
-            currentRoom = nextRoom;
-            System.out.println(currentRoom.getLongDescription());
+        } else {
+            if (isOffice(nextRoom)) {
+                Item keys = player.findItem("keys");
+                if (keys == null) {
+                    System.out.println("you should find the key to unlock this door");
+                } else {
+                    currentRoom = nextRoom;
+                    System.out.println(currentRoom.getLongDescription());
+                }
+            } else {
+                currentRoom = nextRoom;
+                System.out.println(currentRoom.getLongDescription());
+                if (currentRoom.getItem() != null) {
+                    System.out.println(currentRoom.getItem().getDescription());
+                }
+            }
         }
     }
 
-    /** 
-     * "Quit" was entered. Check the rest of the command to see
-     * whether we really quit the game.
+    /**
+     * "Quit" was entered. Check the rest of the command to see whether we really
+     * quit the game.
+     * 
      * @return true, if this command quits the game, false otherwise.
      */
-    private boolean quit(Command command) 
-    {
-        if(command.hasSecondWord()) {
+    private boolean quit(Command command) {
+        if (command.hasSecondWord()) {
             System.out.println("Quit what?");
             return false;
+        } else {
+            return true; // signal that we want to quit
         }
-        else {
-            return true;  // signal that we want to quit
+    }
+
+    private boolean isOffice(Room nextRoom) {
+        if (nextRoom.getLongDescription().contains("office")) {
+            return true;
         }
+        return false;
     }
 }
