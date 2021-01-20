@@ -7,34 +7,36 @@ Type 'help' if you need help.
 
 You are You are currently outside the University.
 Exits: east south north west
-> go west
-You are Your in the pub on campus.
-Exits: east south north
 > go east
+You are You have entered the lecture theater.
+Exits: west
+Pick up the laptop to increase your score
+> pick Laptop
+Laptop has been added to your backpack
+your score is:1
+> go west
 You are You are currently outside the University.
 Exits: east south north west
 > go west
 You are Your in the pub on campus.
 Exits: east south north
-> go south
-You are You are now in the cafeteria.
-Exits: east north
-Pick up the Keys to increse your score and open the locked door
-> go east
-You are You have entered the computing lab.
-Exits: east north west
-> go south
-There is no door!
 > go north
-You are You are currently outside the University.
-Exits: east south north west
-> go west
+You are You are at the university gym.
+Exits: south
+Pick up the water to increaste your score
+> pick Water
+Water has been added to your backpack
+your score is:2
+> go south
 You are Your in the pub on campus.
 Exits: east south north
 > go south
 You are You are now in the cafeteria.
 Exits: east north
 Pick up the Keys to increse your score and open the locked door
+> pick Keys
+Keys has been added to your backpack
+your score is:3
 > go east
 You are You have entered the computing lab.
 Exits: east north west
@@ -47,5 +49,5 @@ Exits: north
 Pick up the hardrive and win the game
 > pick Hardrive
 Hardrive has been added to your backpack
-your score is:1
+your score is:4
 > 
