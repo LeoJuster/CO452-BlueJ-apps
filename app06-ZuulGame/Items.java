@@ -3,32 +3,32 @@
  */
 public class Items
 {
-    private Item Laptop;
-    private Item Water;
-    private Item Keys;
-    private Item treasureBox;
+    private Item laptop;
+    private Item water;
+    private Item keys;
+    private Item hardrive;
 
     public Items() 
     {
-        Laptop = new Item("Laptop","Pick up the laptop to increase your score");
-        Water = new Item("Water","Pick up the water to increaste your score");
-        Keys = new Item("Keys","Pick up the Keys to increse your score and open the locked door");
-        treasureBox = new Item("Treasure-Box","Please pick up the treasure box to win the game");
+        laptop = new Item("Laptop","Pick up the laptop to increase your score");
+        water = new Item("Water","Pick up the water to increaste your score");
+        keys = new Item("Keys","Pick up the Keys to increse your score and open the locked door");
+        hardrive = new Item("Hardrive","Pick up the hardrive and win the game");
     }
 
     public Item getLaptop() {
-        return Laptop;
+        return laptop;
     }
 
     public Item getWater() {
-        return Water;
+        return water;
     }
 
     public Item getKeys() {
-        return Keys;
+        return keys;
     }
 
-    public Item getTreasure() {
-        return treasureBox;
+    public Item getHardrive() {
+        return hardrive;
     }
 }

@@ -44,7 +44,7 @@ public class Map
         parkingLot = new Room("You are in the Parking lot", null);
         gym = new Room("You are at the university gym", items.getWater());
         cafeteria = new Room("You are now in the cafeteria", items.getKeys());
-        hallway = new Room("You are in the university hallway", items.getTreasure());
+        hallway = new Room("You are in the university hallway", items.getHardrive());
 
         startRoom = outside;  // start game outside
     }

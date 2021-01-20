@@ -10,7 +10,6 @@ public class Player
     private int score;
     private ArrayList<Item> inventory;
 
-
     public Player(String name)
     {
         this.name = name;
@@ -32,12 +31,13 @@ public class Player
     {
         if (item != null) {
             inventory.add(item);
-            System.out.println(item.getItemName() + " was added to your inventory");
-            
-            if(item.getItemName().equals("treasure"))
+            System.out.println(item.getItemName() + " has been added to your backpack");
+
+            if(item.getItemName().equals("pick Hardrive"))
             {
-                System.out.println("Congratulations " + this.name + ", you won the game!\n" +
-                                    "score: " + this.score);
+                System.out.println("Congratulations " + this.name + ", you won the game!\n");
+                System.out.println("You have retived the Hardrive, we didn't have a doubt");
+                System.out.println( "score: " + this.score);
             }
         }
         else {
@@ -49,6 +49,7 @@ public class Player
     {
         return score;
     }
+
     public void resetScore()
     {
         score = 0;
@@ -71,7 +72,7 @@ public class Player
                 return item;
 
         }
-            return null;
+        return null;
     }
 
     public void print()
