@@ -33,7 +33,7 @@ public class Player
             inventory.add(item);
             System.out.println(item.getItemName() + " has been added to your backpack");
 
-            if(item.getItemName().equals("pick Hardrive"))
+            if(item.getItemName().equals("Hardrive"))
             {
                 System.out.println("Congratulations " + this.name + ", you won the game!\n");
                 System.out.println("You have retived the Hardrive, we didn't have a doubt");

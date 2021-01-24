@@ -46,7 +46,7 @@ public class Game
 
         while (!finished) {
 
-            if (this.player.findItem("treasure") != null) {
+            if (this.player.findItem("hardrive") != null) {
                 return;
             } 
             else {
@@ -143,10 +143,7 @@ public class Game
         parser.showCommands();
     }
 
-     /**
-     * Try to go in one direction. If there is an exit, enter the new room,
-     * otherwise print an error message.
-     */
+    
     /**
      * Try to go in one direction. If there is an exit, enter the new room,
      * otherwise print an error message.
@@ -167,7 +164,7 @@ public class Game
             if (isOffice(nextRoom)) {
                 Item keys = player.findItem("keys");
                 if (keys == null) {
-                    System.out.println("you should find the key to unlock this door");
+                    System.out.println("You should find the key to unlock this door");
                 } else {
                     currentRoom = nextRoom;
                     System.out.println(currentRoom.getLongDescription());
