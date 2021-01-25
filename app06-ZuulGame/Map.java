@@ -40,11 +40,11 @@ public class Map
         theater = new Room("You have entered the lecture theater",items.getLaptop());
         pub = new Room("Your in the pub on campus",null);
         lab = new Room("You have entered the computing lab", null);
-        office = new Room("You have now entered the Office", items.getKeys());
+        office = new Room("You have now entered the Office", null);
         parkingLot = new Room("You are in the Parking lot", null);
         gym = new Room("You are at the university gym", items.getWater());
-        cafeteria = new Room("You are now in the cafeteria", null);
-        hallway = new Room("You are in the university hallway", items.getHardrive());
+        cafeteria = new Room("You are now in the cafeteria", items.getKeys());
+        hallway = new Room("You are in the university hallway, Pick the hardrive to win the game!", items.getHardrive());
 
         startRoom = outside;  // start game outside
     }

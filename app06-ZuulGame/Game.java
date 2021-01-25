@@ -161,8 +161,8 @@ public class Game
         if (nextRoom == null) {
             System.out.println("There is no door!");
         } else {
-            if (isOffice(nextRoom)) {
-                Item keys = player.findItem("keys");
+            if (isHallway(nextRoom)) {
+                Item keys = player.findItem("Keys");
                 if (keys == null) {
                     System.out.println("You should find the key to unlock this door");
                 } else {
@@ -194,10 +194,11 @@ public class Game
         }
     }
 
-    private boolean isOffice(Room nextRoom) {
-        if (nextRoom.getLongDescription().contains("office")) {
+    private boolean isHallway(Room nextRoom) {
+        if (nextRoom.getLongDescription().contains("hallway")) {
             return true;
         }
         return false;
     }
+    
 }

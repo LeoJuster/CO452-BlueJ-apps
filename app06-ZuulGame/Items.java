@@ -11,7 +11,7 @@ public class Items
     public Items() 
     {
         laptop = new Item("Laptop","Pick up the laptop to increase your score");
-        water = new Item("Water","Pick up the water to increaste your score");
+        water = new Item("Water","Pick up the water to increase your score");
         keys = new Item("Keys","Pick up the Keys to increse your score and open the locked door");
         hardrive = new Item("Hardrive","Pick up the hardrive and win the game");
     }
