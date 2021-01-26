@@ -112,7 +112,7 @@ public class Game
 
     private void pickItem(Command command) {
         if (!command.hasSecondWord()) {
-            // If the second wor is not there, we don't know where to go...
+            // If the second word is not there, we don't know where to go...
             System.out.println("What would you like to pick up?");
             return;
         }
@@ -135,9 +135,9 @@ public class Game
      */
     private void printHelp() 
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
-        System.out.println("Find the hidden items around the university and retrive the hardrive");
+        System.out.println("You're alone. no one to help. Work your way");
+        System.out.println("around the university.");
+        System.out.println("Find the hidden items scattered around the university and retrive the hardrive");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
